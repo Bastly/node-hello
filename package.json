@@ -1,0 +1,12 @@
+{
+	"name": "hello",
+	"description": "hello world test",
+	"version": "0.0.1",
+	"private": "true",
+	"dependencies": {
+		"colors": "*"
+		},
+	"scripts": {
+		"start": "node app.js"
+	}
+}
