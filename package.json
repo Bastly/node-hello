@@ -4,7 +4,9 @@
 	"version": "0.0.1",
 	"private": "true",
 	"dependencies": {
-		"colors": "*"
+		"colors": "*",
+		"bunyan": "*",
+		"zmq" : "*"
 		},
 	"scripts": {
 		"start": "node app.js"
