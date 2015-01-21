@@ -5,6 +5,8 @@ var log = bunyan.createLogger({name: "publisher"});
 var zmq = require('zmq')
   , sock = zmq.socket('pub');
 
+log.info("executed publisher, waiting to sync with subscriber on sync");
+
 sock.bindSync('tcp://127.0.0.1:3000');
 log.info('Publisher bound to port 3000');
 
