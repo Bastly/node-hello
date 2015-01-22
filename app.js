@@ -7,10 +7,10 @@ var zmq = require('zmq')
 
 log.info("executed publisher, waiting to sync with subscriber on sync");
 
-sock.bindSync('tcp://127.0.0.1:3000');
-log.info('Publisher bound to port 3000');
+sock.bindSync('tcp://'+ process.argv[2] +':3000');
+log.info('Publisher bound to '+ process.argv[2] +': 3000');
 
 setInterval(function(){
   log.info('sending a multipart message envelope');
   sock.send(['kitty cats', 'meow!']);
-}, 500);
+}, 1000);
